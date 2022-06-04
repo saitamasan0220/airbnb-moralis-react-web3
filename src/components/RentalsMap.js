@@ -31,7 +31,7 @@ function RentalsMap({locations, google, setHighLight}) {
           disableDefaultUI={true}
           >
             {locations.map((coords, i) => (
-              <Marker position={coords} onClick={() => setHighLight(i)} />
+              <Marker key={i} position={coords} onClick={() => setHighLight(i)} />
             ))}
           </Map>
       )}
@@ -41,5 +41,5 @@ function RentalsMap({locations, google, setHighLight}) {
 
 // export default RentalsMap;
 export default GoogleApiWrapper({
-  apiKey: ""
+  apiKey: "AIzaSyDLsB-Stv6R3nNV87NY0p4lik1jciTwXww"
 }) (RentalsMap);
