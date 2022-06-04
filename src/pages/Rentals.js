@@ -7,6 +7,7 @@ import logo from "../images/airbnbRed.png";
 import RentalsMap from "../components/RentalsMap";
 import {useState, useEffect} from "react";
 import {useMoralis, useWeb3ExecuteFunction} from "react-moralis";
+import User from "../components/User";
 
 // api key: AIzaSyDLsB-Stv6R3nNV87NY0p4lik1jciTwXww
 
@@ -202,6 +203,8 @@ const Rentals = () => {
           </div>
        </div>
        <div className="lrContainers">
+         {account &&
+         <User account={account} />}
          <ConnectButton /> 
        </div>
      </div> 
